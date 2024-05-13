@@ -6,16 +6,9 @@ import { setSelectCategory } from "../../redux/filmSlice";
 const Subtitle = () => {
   const { selectCategory } = useSelector((state) => state.film);
   const dispatch = useDispatch();
-  const path = "/";
-
-  useEffect(() => {
-    path === "/" && dispatch(setSelectCategory(""));
-  }, [path]);
 
   return (
-    <Text className=" text-3xl font-bold text-white">{`Popüler Başlıklar ${
-      selectCategory !== "" ? ": " + selectCategory : ""
-    }`}</Text>
+    <Text className=" text-3xl font-bold text-white">Popüler Başlıklar</Text>
   );
 };
 

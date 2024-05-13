@@ -10,15 +10,22 @@ const Stack = createStackNavigator();
 const MainRouter = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Categories"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Categories" component={Categories} />
-        <Stack.Screen name="Films" component={Films} />
-        <Stack.Screen name="FilmDetail" component={FilmDetail} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator
+      initialRouteName="Categories"
+      screenOptions={{ headerShown: false }}
+    >
+      <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen 
+        name="Films" 
+        component={Films} 
+        options={({ route }) => ({ 
+          title: route.params.category, // İsteğe bağlı: Filmler için başlık belirleme
+          path: '/films/:category' // Yeni path belirleme
+        })}
+      />
+      <Stack.Screen name="FilmDetail" component={FilmDetail} />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 };
 

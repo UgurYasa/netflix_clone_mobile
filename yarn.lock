@@ -6893,6 +6893,7 @@ __metadata:
     nativewind: "npm:^2.0.11"
     react: "npm:18.2.0"
     react-native: "npm:0.73.4"
+    react-native-element-dropdown: "npm:^2.12.0"
     react-native-gesture-handler: "npm:~2.14.0"
     react-native-safe-area-context: "npm:^4.10.1"
     react-native-screens: "npm:^3.29.0"
@@ -7793,6 +7794,18 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: 10c0/6eb5e4b28028c23e2bfcf73371e72cd4162e4ac7ab445ddae2afe24e347a37d6dc22fae6e1748632cd43c6d4f9b8f86dcf26bf9275e1874f436d129952528ae0
+  languageName: node
+  linkType: hard
+
+"react-native-element-dropdown@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "react-native-element-dropdown@npm:2.12.0"
+  dependencies:
+    lodash: "npm:^4.17.21"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/ff3078f613a2f2c0a0ea48a52f6cad625163b98a758d4b15e2662b019f6aae4a60a3693abb42ea95901972d0d927ff389e03b2fd31b9bb5173472a2f31f0e5e7
   languageName: node
   linkType: hard
 
