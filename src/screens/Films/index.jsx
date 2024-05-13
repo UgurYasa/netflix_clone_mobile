@@ -11,8 +11,8 @@ import {
   setSearch,
 } from "../../redux/filmSlice";
 import DropdownComponent from "../../components/Dropdown";
-const Films = (props) => {
-  const category = props.route.params.item;
+const Films = ({ route, navigation }) => {
+  const category = route.params.item;
 
   //REDUX
   const { filteredFilms, search, sortOption, options } = useSelector(
@@ -68,6 +68,7 @@ const Films = (props) => {
           <View className="flex-1">
             <Card
               key={index}
+              navigation={navigation}
               title={item.title}
               isCategory={false}
               imageUrl={item.images["Poster Art"].url}

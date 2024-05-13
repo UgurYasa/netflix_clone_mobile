@@ -18,12 +18,9 @@ const MainRouter = () => {
       <Stack.Screen 
         name="Films" 
         component={Films} 
-        options={({ route }) => ({ 
-          title: route.params.category, // İsteğe bağlı: Filmler için başlık belirleme
-          path: '/films/:category' // Yeni path belirleme
-        })}
+      
       />
-      <Stack.Screen name="FilmDetail" component={FilmDetail} />
+      <Stack.Screen name="FilmDetail" component={FilmDetail}  />
     </Stack.Navigator>
   </NavigationContainer>
   );

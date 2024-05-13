@@ -23,7 +23,7 @@ const Card = ({ navigation, imageUrl, title, isCategory = false }) => {
             navigation.navigate("Films", { item: title });
             dispatch(setSelectCategory(title));
           } else {
-            navigation.navigate("FilmDetail", {});
+            navigation.navigate("FilmDetail", { item: path });
             dispatch(setSearch(""));
           }
         }}
