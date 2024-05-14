@@ -1,11 +1,10 @@
-import { StyleSheet, View, ScrollView, StatusBar } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../../components/Card";
 import { extractCategories } from "../../redux/filmSlice";
 const Categories = ({ navigation }) => {
-  console.log(navigation.category);
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.film);
 
